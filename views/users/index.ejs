@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Meet the Talented Photographers</h1>
+            <a href='/users'><button>Home</button></a>
+            <a href='/users/new'><button>Add Your Info!</button></a>
+        </nav>
+    </header>
+    <main>
+        <% for(let i = 0; i < users.length; i++) { %>
+          <p><a href='/users/<%=users[i]._id%>'><button><%=users[i].username%></button></a></p>
+       <% } %>
+    </main>
+</body>
+</html>
