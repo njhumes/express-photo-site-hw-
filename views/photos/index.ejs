@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>See the Cool Photographs</h1>
+            <a href='/'><button>Home</button></a>
+            <a href='/photos'><button>Photos</button></a>
+            <a href='/photos/new'><button>Add Your Photo!</button></a>
+        </nav>
+    </header>
+    <main>
+        <% for(let i = 0; i < photos.length; i++) { %>
+          <p><a href='/photos/<%=photos[i]._id%>'><img src='<%=photos[i].image%>'></img></a></p>
+       <% } %>
+    </main>
+</body>
+</html>

@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const User = require('../models/userSchema')
+const Photo = require('../models/photosSchema')
 
 // INdex Route
 router.get('/', (req, res) => {

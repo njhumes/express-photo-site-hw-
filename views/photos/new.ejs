@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>New Photo</h1>
+            <a href='/photos'><button>Photos</button></a>
+        </nav>
+    </header>
+    <br><br>
+    <main>
+        <form action='/photos' method='POST'>
+            <select name='userId'>
+            <%for(let i = 0; i < users.length; i++) {%>
+                <option value='<%=users[i]._id%>'><%=users[i].username%></option>
+          <%  }%>
+          </select>
+
+
+
+
+            Title:<input type='text' name='title'>
+            Image:<input type='text' name='image'>
+            <button type='submit'>Upload Photo</button>
+        </form>
+    </main>
+</body>
+</html>

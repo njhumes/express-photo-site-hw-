@@ -10,11 +10,16 @@
     <header>
         <nav>
             <h1>Show User</h1>
-            <a href='/users'><button>Home</button></a>
+            <a href='/'><button>Home</button></a>
+            <a href='/users'><button>Users</button></a>
         </nav>
     </header>
     <main>
         <p>Username: <%=user.username%></p>
+        <% for(let i = 0; i < user.photos.length; i++) { %>
+            <img src='<%=user.photos[i].image%>'>   
+       <% }   %>
+
         <a href='/users/<%=user._id%>/edit'><button>Edit</button></a>
         <form action='/users/<%=user._id%>?_method=DELETE' method='POST'>
             <button type='submit'>Delete User</button>

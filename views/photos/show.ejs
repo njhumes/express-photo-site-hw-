@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Show Photo</h1>
+            <a href='/'><button>Home</button></a>
+            <a href='/photos'><button>Photos</button></a>
+        </nav>
+    </header>
+    <main>
+        <h3>Title: <%=photo.title%></h3>
+        <h4>User: <%=user.username%></h4><br>
+        <img src='<%=photo.image%>'>
+        <a href='/photos/<%=photo._id%>/edit'><button>Edit</button></a>
+        <form action='/photos/<%=photo._id%>?_method=DELETE' method='POST'>
+            <button type='submit'>Delete Photo</button>
+        </form>
+    </main>
+</body>
+</html>
